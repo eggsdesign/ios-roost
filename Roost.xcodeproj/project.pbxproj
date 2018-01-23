@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED5558892017540B00389AB1 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558882017540B00389AB1 /* ArrayExtension.swift */; };
+		ED5558A420175BC600389AB1 /* NibInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55589B20175BC600389AB1 /* NibInjector.swift */; };
+		ED5558A520175BC600389AB1 /* ViewInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55589C20175BC600389AB1 /* ViewInjector.swift */; };
+		ED5558A620175BC600389AB1 /* NibCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55589E20175BC600389AB1 /* NibCollectionViewCell.swift */; };
+		ED5558A720175BC600389AB1 /* NibInjectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED55589F20175BC600389AB1 /* NibInjectedView.swift */; };
+		ED5558A820175BC600389AB1 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558A120175BC600389AB1 /* CircularImageView.swift */; };
+		ED5558A920175BC600389AB1 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558A220175BC600389AB1 /* ShadowView.swift */; };
+		ED5558AA20175BC600389AB1 /* UIView+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558A320175BC600389AB1 /* UIView+RoundedCorner.swift */; };
+		ED5558AC20175E4200389AB1 /* NibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558AB20175E4200389AB1 /* NibTableViewCell.swift */; };
+		ED5558AF2017603200389AB1 /* KeyboardChangeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5558AE2017603200389AB1 /* KeyboardChangeHelper.swift */; };
 		ED80009E201742D3009F6A59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80009D201742D3009F6A59 /* AppDelegate.swift */; };
 		ED8000A0201742D3009F6A59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80009F201742D3009F6A59 /* ViewController.swift */; };
 		ED8000A3201742D3009F6A59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8000A1201742D3009F6A59 /* Main.storyboard */; };
@@ -34,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED5558882017540B00389AB1 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		ED55589B20175BC600389AB1 /* NibInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInjector.swift; sourceTree = "<group>"; };
+		ED55589C20175BC600389AB1 /* ViewInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInjector.swift; sourceTree = "<group>"; };
+		ED55589E20175BC600389AB1 /* NibCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED55589F20175BC600389AB1 /* NibInjectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInjectedView.swift; sourceTree = "<group>"; };
+		ED5558A120175BC600389AB1 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		ED5558A220175BC600389AB1 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		ED5558A320175BC600389AB1 /* UIView+RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorner.swift"; sourceTree = "<group>"; };
+		ED5558AB20175E4200389AB1 /* NibTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibTableViewCell.swift; sourceTree = "<group>"; };
+		ED5558AE2017603200389AB1 /* KeyboardChangeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardChangeHelper.swift; sourceTree = "<group>"; };
 		ED80009A201742D3009F6A59 /* Roost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED80009D201742D3009F6A59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED80009F201742D3009F6A59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +94,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED5558852017494D00389AB1 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				ED55588620174A3D00389AB1 /* Core */,
+				ED55589820175BC600389AB1 /* GUI */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		ED55588620174A3D00389AB1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ED5558882017540B00389AB1 /* ArrayExtension.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ED55589820175BC600389AB1 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				ED55589920175BC600389AB1 /* NibInjection */,
+				ED5558AD2017603200389AB1 /* Utils */,
+				ED5558A020175BC600389AB1 /* Views */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		ED55589920175BC600389AB1 /* NibInjection */ = {
+			isa = PBXGroup;
+			children = (
+				ED55589A20175BC600389AB1 /* Utils */,
+				ED55589D20175BC600389AB1 /* Views */,
+			);
+			path = NibInjection;
+			sourceTree = "<group>";
+		};
+		ED55589A20175BC600389AB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED55589B20175BC600389AB1 /* NibInjector.swift */,
+				ED55589C20175BC600389AB1 /* ViewInjector.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED55589D20175BC600389AB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED55589E20175BC600389AB1 /* NibCollectionViewCell.swift */,
+				ED55589F20175BC600389AB1 /* NibInjectedView.swift */,
+				ED5558AB20175E4200389AB1 /* NibTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED5558A020175BC600389AB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED5558A120175BC600389AB1 /* CircularImageView.swift */,
+				ED5558A220175BC600389AB1 /* ShadowView.swift */,
+				ED5558A320175BC600389AB1 /* UIView+RoundedCorner.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED5558AD2017603200389AB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED5558AE2017603200389AB1 /* KeyboardChangeHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		ED800091201742D3009F6A59 = {
 			isa = PBXGroup;
 			children = (
+				ED5558852017494D00389AB1 /* Lib */,
 				ED80009C201742D3009F6A59 /* Roost */,
 				ED8000B1201742D3009F6A59 /* RoostTests */,
 				ED8000BC201742D3009F6A59 /* RoostUITests */,
@@ -259,8 +353,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5558AF2017603200389AB1 /* KeyboardChangeHelper.swift in Sources */,
+				ED5558A920175BC600389AB1 /* ShadowView.swift in Sources */,
+				ED5558892017540B00389AB1 /* ArrayExtension.swift in Sources */,
 				ED8000A0201742D3009F6A59 /* ViewController.swift in Sources */,
 				ED80009E201742D3009F6A59 /* AppDelegate.swift in Sources */,
+				ED5558A420175BC600389AB1 /* NibInjector.swift in Sources */,
+				ED5558A720175BC600389AB1 /* NibInjectedView.swift in Sources */,
+				ED5558A820175BC600389AB1 /* CircularImageView.swift in Sources */,
+				ED5558A620175BC600389AB1 /* NibCollectionViewCell.swift in Sources */,
+				ED5558A520175BC600389AB1 /* ViewInjector.swift in Sources */,
+				ED5558AC20175E4200389AB1 /* NibTableViewCell.swift in Sources */,
+				ED5558AA20175BC600389AB1 /* UIView+RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
