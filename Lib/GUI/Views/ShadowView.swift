@@ -8,7 +8,7 @@ import UIKit
  Add a ShadowView beneath a view you want to cast shadows.
  The ShadowView will ensure that the shadows are rasterized and performant, yet still update when the size of the view updates.
  */
-public class ShadowView: UIView {
+open class ShadowView: UIView {
     private var shadowBounds: CGRect!
 
     public required override init(frame: CGRect) {
