@@ -23,8 +23,8 @@ public typealias KeyboardChangeHelperAnimationBlock = (_ isKeyboardBeingShown: B
 
 public class KeyboardChangeHelper {
     let constraints: [NSLayoutConstraint]
-    private(set) var isListeningToKeyboardChanges: Bool = false
-    private(set) var isKeyboardVisible: Bool = false
+    public private(set) var isListeningToKeyboardChanges: Bool = false
+    public private(set) var isKeyboardVisible: Bool = false
     private var initialConstraintConstants: [CGFloat]!
     
     public var alongsideAnimationBlock: KeyboardChangeHelperAnimationBlock?

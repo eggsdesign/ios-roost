@@ -10,7 +10,7 @@ import UIKit
  class into its contentView
  */
 open class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
-    private(set) var injectedView: UIView!
+    public private(set) var injectedView: UIView!
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

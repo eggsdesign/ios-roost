@@ -9,7 +9,7 @@ import UIKit
  class into its contentView
  */
 open class NibTableViewCell: UITableViewCell, NibInjectedView {
-    private(set) var injectedView: UIView!
+    public private(set) var injectedView: UIView!
     public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commonInit()
