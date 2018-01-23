@@ -9,7 +9,7 @@ import UIKit
  A UICollectionViewCell class that automatically injects a nib with the same name as the
  class into its contentView
  */
-public class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
+open class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
     private(set) var injectedView: UIView!
     
     public required init?(coder aDecoder: NSCoder) {

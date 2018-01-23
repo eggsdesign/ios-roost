@@ -8,7 +8,7 @@ import UIKit
  A UITableViewCell class that automatically injects a nib with the same name as the
  class into its contentView
  */
-public class NibTableViewCell: UITableViewCell, NibInjectedView {
+open class NibTableViewCell: UITableViewCell, NibInjectedView {
     private(set) var injectedView: UIView!
     public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
