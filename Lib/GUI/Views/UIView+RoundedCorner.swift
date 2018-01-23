@@ -7,8 +7,8 @@ import UIKit
 /**
  Utility class for rounding a views corners
  */
-extension UIView {
-    enum RoundedCornerStyle {
+public extension UIView {
+    public enum RoundedCornerStyle {
         case none
         case fixedAmount(cornerRadius: CGFloat)
         case relativeAmount(cornerRadiusRatio: CGFloat)
@@ -30,7 +30,7 @@ extension UIView {
         }
     }
 
-    func applyCornerStyle(_ style: RoundedCornerStyle) {
+    public func applyCornerStyle(_ style: RoundedCornerStyle) {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = RoundedCornerStyle.cornerRadius(forView: self, withStyle: style)
     }

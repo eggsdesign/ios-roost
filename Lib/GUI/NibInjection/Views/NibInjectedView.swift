@@ -10,20 +10,20 @@ import UIKit
 See NibCollectionViewCell for a usage example
  
  */
-protocol NibInjectedView {
+public protocol NibInjectedView {
     var nibName: String { get }
     var nibBundle: Bundle? { get }
     var targetContainerView: UIView { get }
     func injectNib() -> UIView
 }
 
-extension NibInjectedView {
+public extension NibInjectedView {
     func setup(with injectedView: UIView) {
         
     }
 }
 
-extension NibInjectedView where Self : UIView {
+public extension NibInjectedView where Self : UIView {
     var nibName: String {
         return String(describing: type(of: self))
     }
@@ -48,13 +48,13 @@ extension NibInjectedView where Self : UIView {
     }
 }
 
-extension NibInjectedView where Self : UITableViewCell {
+public extension NibInjectedView where Self : UITableViewCell {
     var targetContainerView: UIView {
         return self.contentView
     }
 }
 
-extension NibInjectedView where Self : UICollectionViewCell {
+public extension NibInjectedView where Self : UICollectionViewCell {
     var targetContainerView: UIView {
         return self.contentView
     }

@@ -4,12 +4,12 @@
 
 import UIKit
 
-class ViewInjector {
+public class ViewInjector {
     /**
      Injects a view into a containing and makes it "stick" to all edges using
      0-length layout constraints with priority 1000
      */
-    static func inject(view: UIView, intoContainer container: UIView) {
+    public static func inject(view: UIView, intoContainer container: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         view.topAnchor.constraint(equalTo: container.topAnchor).isActive = true

@@ -4,8 +4,6 @@
 
 import UIKit
 
-typealias KeyboardChangeHelperAnimationBlock = (_ isKeyboardBeingShown: Bool) -> Void
-
 /**
  KeyboardChangeHelper helps with listening to keyboard frame changes,
  and moving your view controller content away from under the keyboard.
@@ -20,19 +18,22 @@ typealias KeyboardChangeHelperAnimationBlock = (_ isKeyboardBeingShown: Bool) ->
  }
  
  */
-class KeyboardChangeHelper {
+
+public typealias KeyboardChangeHelperAnimationBlock = (_ isKeyboardBeingShown: Bool) -> Void
+
+public class KeyboardChangeHelper {
     let constraints: [NSLayoutConstraint]
     private(set) var isListeningToKeyboardChanges: Bool = false
     private(set) var isKeyboardVisible: Bool = false
     private var initialConstraintConstants: [CGFloat]!
     
-    var alongsideAnimationBlock: KeyboardChangeHelperAnimationBlock?
+    public var alongsideAnimationBlock: KeyboardChangeHelperAnimationBlock?
     
-    convenience init(constraint: NSLayoutConstraint) {
+    public convenience init(constraint: NSLayoutConstraint) {
         self.init(constraints: [constraint])
     }
     
-    init(constraints: [NSLayoutConstraint]) {
+    public init(constraints: [NSLayoutConstraint]) {
         self.constraints = constraints
         self.initialConstraintConstants = constraints.map({ $0.constant })
     }
@@ -41,7 +42,7 @@ class KeyboardChangeHelper {
         self.stopListening()
     }
     
-    func startListening() {
+    public func startListening() {
         if !self.isListeningToKeyboardChanges {
             NotificationCenter.default.addObserver(self,
                                                    selector: #selector(keyboardChanged(notification:)),
@@ -51,12 +52,12 @@ class KeyboardChangeHelper {
         }
     }
     
-    func stopListening() {
+    public func stopListening() {
         NotificationCenter.default.removeObserver(self)
         self.isListeningToKeyboardChanges = false
     }
     
-    @objc func keyboardChanged(notification: Notification) {
+    @objc private func keyboardChanged(notification: Notification) {
         guard let userInfo = notification.userInfo,
             let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect,
             let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else {

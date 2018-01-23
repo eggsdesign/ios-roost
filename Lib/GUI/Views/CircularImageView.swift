@@ -8,15 +8,15 @@ import UIKit
  An UIImageView subclass that automatically adjusts
  its corner radius to stay circular at all square sizes.
  */
-class CircleImageView: UIImageView {
+public class CircleImageView: UIImageView {
     private var oldCircleBounds: CGRect!
 
-    required override init(frame: CGRect) {
+    public required override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -25,12 +25,12 @@ class CircleImageView: UIImageView {
         self.clipsToBounds = true
     }
     
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         self.updateCornerRadiusIfNeeded()
     }
     
-    override var bounds: CGRect {
+    open override var bounds: CGRect {
         didSet {
             self.updateCornerRadiusIfNeeded()
         }

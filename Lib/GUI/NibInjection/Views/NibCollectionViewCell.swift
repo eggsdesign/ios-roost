@@ -9,15 +9,15 @@ import UIKit
  A UICollectionViewCell class that automatically injects a nib with the same name as the
  class into its contentView
  */
-class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
+public class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
     private(set) var injectedView: UIView!
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
