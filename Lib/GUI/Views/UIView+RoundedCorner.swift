@@ -14,7 +14,7 @@ public extension UIView {
         case relativeAmount(cornerRadiusRatio: CGFloat)
         case circle
         
-        static func cornerRadius(forView view: UIView, withStyle style: RoundedCornerStyle) -> CGFloat {
+        public static func cornerRadius(forView view: UIView, withStyle style: RoundedCornerStyle) -> CGFloat {
             switch (style) {
             case .none:
                 return 0
