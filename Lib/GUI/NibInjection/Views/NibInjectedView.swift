@@ -15,6 +15,7 @@ public protocol NibInjectedView {
     var nibBundle: Bundle? { get }
     var targetContainerView: UIView { get }
     func injectNib() -> UIView
+    func setup(with injectedView: UIView)
 }
 
 public extension NibInjectedView {
