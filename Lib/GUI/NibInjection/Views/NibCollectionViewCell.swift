@@ -25,4 +25,8 @@ open class NibCollectionViewCell: UICollectionViewCell, NibInjectedView {
     private func commonInit() {
         self.injectedView = self.injectNib()
     }
+    
+    open func setup(with injectedView: UIView) {
+        
+    }
 }
