@@ -83,7 +83,7 @@ public class KeyboardChangeHelper {
     }
     
     private func apply(keyboardFrame: CGRect, toConstraints constraints: [NSLayoutConstraint]) -> [UIView] {
-        return constraints.enumerated().flatMap({ (index, constraint) -> UIView? in
+        return constraints.enumerated().compactMap({ (index, constraint) -> UIView? in
             guard let containingView = self.findContainingView(for: constraint) else {
                 return nil
             }

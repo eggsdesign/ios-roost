@@ -10,7 +10,7 @@ public extension Array where Element: Equatable {
      */
     public var orderedSet: Array  {
         var array: [Element] = []
-        return flatMap {
+        return compactMap {
             if array.contains($0) {
                 return nil
             } else {
