@@ -28,6 +28,7 @@ open class NibView: UIView, NibInjectedView {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.commonInit()
     }
     
     private func commonInit() {
