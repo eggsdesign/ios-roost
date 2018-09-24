@@ -46,7 +46,7 @@ public class KeyboardChangeHelper {
         if !self.isListeningToKeyboardChanges {
             NotificationCenter.default.addObserver(self,
                                                    selector: #selector(keyboardChanged(notification:)),
-                                                   name: Notification.Name.UIKeyboardWillChangeFrame,
+                                                   name: UIResponder.keyboardWillChangeFrameNotification,
                                                    object: nil)
             self.isListeningToKeyboardChanges = true
         }
@@ -59,8 +59,8 @@ public class KeyboardChangeHelper {
     
     @objc private func keyboardChanged(notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect,
-            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval else {
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else {
             return
         }
         
@@ -72,11 +72,11 @@ public class KeyboardChangeHelper {
         
         self.isKeyboardVisible = keyboardFrame.origin.y < window.frame.size.height
         
-        guard let animationOptionsRaw = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt else {
+        guard let animationOptionsRaw = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {
             return
         }
         
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptionsRaw), animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: animationOptionsRaw), animations: {
             viewsNeedingLayout.forEach({ $0.layoutIfNeeded() })
             self.alongsideAnimationBlock?(self.isKeyboardVisible)
         }, completion: nil)
